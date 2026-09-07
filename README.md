@@ -1,56 +1,38 @@
 # JUnit 5 Student Grade Calculator
 
-A small Java project built to practice and demonstrate **JUnit 5 unit testing** with **Maven**.
+A simple Java application created to practice **unit testing with JUnit 5 and Maven**.
 
-## 🚀 Features
+## Features
 
 - Calculate total marks
 - Calculate percentage
-- Calculate student grade
-- Determine pass/fail status
-- Validate marks between 0 and 100
+- Calculate grade
+- Check pass/fail status
+- Validate marks
 - Handle invalid input using exceptions
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- Java
+- Java 17
 - Maven
 - JUnit 5
 
-## 🧪 JUnit 5 Concepts Demonstrated
+## JUnit 5 Concepts
 
-- `@Test`
-- `@BeforeEach`
-- `@AfterEach`
-- `@BeforeAll`
-- `@AfterAll`
-- `@DisplayName`
+- Test lifecycle: `@BeforeAll`, `@BeforeEach`, `@AfterEach`, `@AfterAll`
+- `@Test` and `@DisplayName`
 - `@Disabled`
-- `@ParameterizedTest`
-- `@ValueSource`
-- `@CsvSource`
-- `assertEquals()`
-- `assertTrue()`
-- `assertFalse()`
-- `assertAll()`
-- `assertThrows()`
-- `assertDoesNotThrow()`
-- `assertTimeout()`
+- Assertions: `assertEquals`, `assertTrue`, `assertFalse`, `assertAll`
+- Exception testing: `assertThrows`, `assertDoesNotThrow`
+- Timeout testing: `assertTimeout`
+- Parameterized tests: `@ParameterizedTest`, `@ValueSource`, `@CsvSource`
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
-JUnit5-StudentGradeCalculator/
-├── pom.xml
-├── README.md
-├── .gitignore
-└── src/
-    ├── main/
-    │   └── java/
-    │       └── com/aditya/grade/
-    │           └── GradeCalculator.java
-    │
-    └── test/
-        └── java/
-            └── com/aditya/grade/
-                └── GradeCalculatorTest.java
+src/
+├── main/java/com/aditya/grade/
+│   └── GradeCalculator.java
+│
+└── test/java/com/aditya/grade/
+    └── GradeCalculatorTest.java
