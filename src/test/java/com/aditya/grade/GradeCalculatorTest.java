@@ -143,4 +143,28 @@ class GradeCalculatorTest {
 
         assertEquals("A", calculator.calculateGrade(95));
     }
+
+    @Test
+    @DisplayName("Should calculate total for zero marks")
+    void shouldCalculateTotalForZeroMarks() {
+        assertEquals(0, calculator.calculateTotal(new int[]{0, 0, 0}));
+    }
+
+    @Test
+    @DisplayName("Should accept boundary mark values")
+    void shouldAcceptBoundaryMarks() {
+        assertAll(
+                () -> assertDoesNotThrow(() -> calculator.calculateTotal(new int[]{0})),
+                () -> assertDoesNotThrow(() -> calculator.calculateTotal(new int[]{100}))
+        );
+    }
+
+    @Test
+    @DisplayName("Should reject negative marks")
+    void shouldRejectNegativeMarks() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> calculator.calculateTotal(new int[]{80, -10, 70})
+        );
+    }
 }
